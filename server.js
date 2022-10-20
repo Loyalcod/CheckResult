@@ -17,6 +17,10 @@ server.get('/',(req,res)=>{
     res.send("this is the server side")
 })
 
+/* --------------------------------------------------------- Admin router crude --------------------------------------------------------- */
+const adminRouter = require("./router/adminRouter")
+server.use('/admin',adminRouter)
+
 
 
 server.listen(port,()=>{
